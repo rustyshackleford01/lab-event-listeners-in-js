@@ -20,6 +20,10 @@ butts.addEventListener('dblclick', resetBackgroundColor);
 
 
 
+
+
+
+
 const displayKey = document.addEventListener('keydown', displayKeyPress)
 
 
@@ -32,18 +36,22 @@ const textInput = document.getElementById('textInput');
 const keyPressDisplay = document.getElementById('keyPressDisplay');
 
 const id = document.getElementById('textInputDisplay')
+
 function displayUserInput() {
   id.textContent = textInput.value;
 }
 
 
-addEventListener('input', displayUserInput)
 
-const someElement = document.querySelector("body");
+  addEventListener('input', displayUserInput)
 
+  const someElement = document.getElementById('keyPressDisplay');
 
+  someElement.addEventListener('mouseover', () => {
+    someElement.style.backgroundColor = 'yellow';
+  });
 
-someElement.addEventListener('mouseover', () => {
-  someElement.style.backgroundColor = 'pink';
-});
-
+  formElement.addEventListener('submit', (event) => {
+    event.preventDefault();
+    // Process form data
+  });
